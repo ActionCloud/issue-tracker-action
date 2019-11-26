@@ -1,0 +1,30 @@
+name: Test tracker
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  test_issue_tracker:
+    runs-on: ubuntu-latest
+    name: A job to test issue tracker
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Track issues
+      id: tracking
+      uses: ./
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Git commit
+      run: |
+        git config --global user.email "idegorepl@gmail.com"
+        git config --global user.name "ActionCloud Bot"
+        git add .
+        git commit -m "Update issues data"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Check output
+      run: echo '${{ steps.tracking.outputs.actioncloud-badge }}'
