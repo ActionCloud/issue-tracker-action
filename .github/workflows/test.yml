@@ -2,7 +2,7 @@ name: Test tracker
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 0 1 * *'
 
 jobs:
   test_issue_tracker:
