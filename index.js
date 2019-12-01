@@ -74,6 +74,11 @@ function dumpData() {
   });
 }
 
+function printBadgeLink() {
+  const actioncloudBadge = '[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://free.actioncloud.io/apps/github-issue-tracker?owner=' + repoOwner + '&repo=' + repoName + ')';
+  console.log(`::set-output name=actioncloud-badge::${actioncloudBadge}`)
+}
+
 async function run() {
   var openIssues = await getOpenIssues();
   var closedIssues = await getClosedIssues();
@@ -86,8 +91,7 @@ async function run() {
   });
 
   dumpData();
-  const actioncloudBadge = '[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://free.actioncloud.io/apps/github-issue-tracker?owner=' + repoOwner + '&repo=' + repoName + ')';
-  console.log(`::set-output name=actioncloud-badge::${actioncloudBadge}`)
+  printBadgeLink();
 }
 
 run();
