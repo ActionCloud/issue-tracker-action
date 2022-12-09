@@ -1,6 +1,7 @@
 name: Test tracker
 
 on:
+  push:
   schedule:
     - cron: '0 0 1 * *'
 
