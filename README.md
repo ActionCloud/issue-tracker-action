@@ -21,7 +21,7 @@ jobs:
     name: A job to test issue tracker
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
     - name: Track issues
       id: tracking
       uses: actioncloud/issue-tracker-action@master
