@@ -8,7 +8,7 @@ outputs:
   actioncloud-badge: # id of output
     description: 'The badge url of a ActionCloud Page'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 branding:
   icon: 'trending-up'
