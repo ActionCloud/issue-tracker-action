@@ -45,16 +45,16 @@ jobs:
 
 ## GitHub Issue Tracker Viewer
 
-The Action will store the issues data into your repository, and you need a web view page to see the chart. The viewer page is hosted in `actioncloud.io`, the url is `https://free.actioncloud.io/apps/github-issue-tracker?owner=<your_owner_name>&repo=<your_repo_name>`.
+The Action will store the issues data into your repository, and you need a web view page to see the chart. The viewer page is hosted in `actioncloud.github.io`, the url is `https://actioncloud.github.io/apps/github-issue-tracker?owner=<your_owner_name>&repo=<your_repo_name>`.
 
 You can put a badge in your README file:
 
-[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://free.actioncloud.io/apps/github-issue-tracker?owner=actioncloud&repo=issue-tracker-action)
+[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://actioncloud.github.io/apps/github-issue-tracker?owner=actioncloud&repo=issue-tracker-action)
 
 ```pre
 # remember to change the owner_name and repo_name to yours:
 
-[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://free.actioncloud.io/apps/github-issue-tracker?owner=<owner_name>&repo=<repo_name>)
+[![](https://img.shields.io/badge/ActionCloud%20App-Issue%20Tracker-blue)](https://actioncloud.github.io/apps/github-issue-tracker?owner=<owner_name>&repo=<repo_name>)
 ```
 
 ### Page preview
